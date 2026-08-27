@@ -1,0 +1,9 @@
+node_modules/
+dist/
+client/dist/
+coverage/
+.env
+server/data/cases.json
+server/data/users.json
+server/data/suspects.jsonl
+server/data/uploads/
