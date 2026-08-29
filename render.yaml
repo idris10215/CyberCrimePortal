@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: national-cyber-crime-portal
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: OPENAI_MODEL
+        value: gpt-5-mini
+      - key: USE_MOCK_SERVICES
+        value: "true"
+      # To enable real OpenAI extraction, set USE_MOCK_SERVICES to "false" and add your OPENAI_API_KEY in Render Dashboard
